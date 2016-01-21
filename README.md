@@ -3,14 +3,12 @@ Compiles Jade templates into static HTML files.
 
 ##Recommended Workflow
 
-1. Fork this repo
-2. Edit the .gitignore to remove views/ and /public
-3. Add your own views and public directories (These are the folders the script looks to compile assets and templates)
-4. Develop your site using Jade templates and any data source you like, whether static JSON or MongoDB, etc
-5. Write the routes and controllers as usual
-6. To test during development, simply `node app` or `npm run dev`
-7. To compile your final static website run `npm run compile`
-8. The directory will be written to the root of this app
+1. Add your own views and public assets (Some views, assets and data are included for an example)
+2. Develop your site using Jade templates and any data source you like, whether static JSON or MongoDB, etc
+3. Write the routes and controllers as usual (Examples are included)
+4. To test during development, simply `node app` or `npm run dev`
+5. To compile your final static website run `npm run compile`
+6. The directory will be written to the root of this app
 
 ##Directions for Setting Up Your Compilation
 
