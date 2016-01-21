@@ -32,7 +32,8 @@ var Compile = require('./compile.js');
 
 module.exports = function() {
   
-  // Write compile functions here
+    // Write compile functions here
+  
     Compile.makeDir('static_out')
     .then(function(directory){
       Compile.writeParent(directory, 'views/index.jade', 'index.html');
