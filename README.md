@@ -10,12 +10,14 @@ Compiles Jade templates into static HTML files.
 5. Write the routes and controllers as usual
 6. To test during development, simply `node app` or `npm run dev`
 7. To compile your final static website run `npm run compile`
+8. The directory will be written to the root of this app
 
 ##Directions for Setting Up Your Compilation
 
-1. Go to app.js
-2. Look inside the if block on line 20
-3. Use the following functions to create directories, copy assets, compile parent pages, and the child pages that belong to each parent.
+1. Go to config.js
+2. Inside the function, you can use the provided functions below to write your compile code
+3. You can make directories, write parent pages, write the child pages that belong to the parents, etc
+4. Making directories returns a promise before writing to it
 
 | Function                | Params        |
 |----------------------- |-------------------------------------|
