@@ -9,7 +9,7 @@ Compiles Jade templates into static HTML files.
 4. Develop your site using Jade templates and any data source you like, whether static JSON or MongoDB, etc
 5. Write the routes and controllers as usual
 6. To test during development, simply `node app` or `npm run dev`
-7. To compile your final product run `npm run compile`
+7. To compile your final static website run `npm run compile`
 
 ##Directions for Setting Up Your Compilation
 
@@ -18,7 +18,7 @@ Compiles Jade templates into static HTML files.
 3. Use the following functions to create directories, copy assets, compile parent pages, and the child pages that belong to each parent.
 
 | Function                | Params        |
-|----------------------- |:-------------------------------------:|
+|----------------------- |-------------------------------------|
 |`Compile.makeDir`       |Name of directory to create            |
 |`Compile.copyAssets`    |Directory to copy assets to            |
 |`Compile.writeParent`   |Directory, template, name of html file |
