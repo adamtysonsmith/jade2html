@@ -20,7 +20,7 @@ Compiles Jade templates into static HTML files.
 | Function                | Params        |
 |----------------------- |-------------------------------------|
 |`Compile.makeDir`       |Name of directory to create            |
-|`Compile.copyAssets`    |Directory to copy assets to            |
+|`Compile.copyAssets`    |Directory to copy public assets to            |
 |`Compile.writeParent`   |Directory, template, name of html file |
 |`Compile.writeChildren` |Directory, template                    |
 
