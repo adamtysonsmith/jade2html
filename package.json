@@ -1,0 +1,20 @@
+{
+  "name": "jade-comp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node app",
+    "compile": "node app compile"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "fs-extra": "^0.26.4",
+    "jade": "^1.11.0",
+    "mkdirp": "^0.5.1",
+    "q": "^1.4.1"
+  }
+}
