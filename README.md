@@ -17,10 +17,10 @@ Compiles Jade templates into static HTML files.
 3. You can make directories, write parent pages, write the child pages that belong to the parents, etc
 4. Making directories returns a promise before writing to it
 
-| Function                | Params        |
-|----------------------- |-------------------------------------|
+| Function               | Params                                |
+|----------------------- |-------------------------------------- |
 |`Compile.makeDir`       |Name of directory to create            |
-|`Compile.copyAssets`    |Directory to copy public assets to            |
+|`Compile.copyAssets`    |Directory to copy public assets to     |
 |`Compile.writeParent`   |Directory, template, name of html file |
 |`Compile.writeChildren` |Directory, template                    |
 

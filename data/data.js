@@ -1,25 +1,25 @@
 module.exports = [
     {
-      title: "Practical Node.js",
+      title: "Hey World",
       author: {
-        twitter: "@azat_co",
-        name: "Azat"
+        twitter: "@actionjackson",
+        name: "Action Jackson"
       },
       tags: ['express', 'node', 'javascript'],
       heading: "Hello, World!",
-      filename: "home.html",
+      filename: "child_1.html",
       id: 0
     },
 
     {
-      title: "MOARR Node.js",
+      title: "Hello There",
       author: {
         twitter: "@thewonkler",
         name: "Adam"
       },
       tags: ['express', 'node', 'javascript'],
-      heading: "Hello, Node and Jade!",
-      filename: "jade.html",
+      heading: "Hello there.. again",
+      filename: "child_2.html",
       id: 1
     }
 ]
