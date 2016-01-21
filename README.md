@@ -32,7 +32,7 @@ var Compile = require('./compile.js');
 
 module.exports = function() {
   
-    // Write compile functions here
+    // Write compile code here
   
     Compile.makeDir('static_out')
     .then(function(directory){
