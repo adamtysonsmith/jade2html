@@ -1,7 +1,7 @@
 var Q    = require('q');
 var fs   = require('fs-extra'); 
 var jade = require('jade');
-var data = require('./data.js');
+var data = require('./data/data.js');
 //var mkdr = require('mkdirp');
 
 // Make directory, returns promise

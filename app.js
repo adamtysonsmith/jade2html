@@ -2,6 +2,7 @@ var express     = require('express');
 var bodyParser  = require('body-parser');
 var Controller  = require('./controller.js');
 var Compile     = require('./compile.js');
+var Config      = require('./config.js');
 var Q           = require('Q');
 
 // Express Config
@@ -19,16 +20,7 @@ app.get('/detail/:id', Controller.detail);
 // Compile Jade Templates
 if (process.argv[2] === 'compile') {
   console.log('Compiling Jade templates to static HTML..');
-  
-  Compile.makeDir('static_out')
-    .then(function(directory){
-      Compile.writeParent(directory, 'views/index.jade', 'index.html');
-      Compile.writeChildren(directory, 'views/detail.jade');
-    })
-    .catch(function(err){
-      console.log("Error compiling templates!", err);
-    });
-  
+  Config();
   console.log('Done!');
 }
 else {

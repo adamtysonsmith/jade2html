@@ -1,6 +1,3 @@
 *.DS_Store
 node_modules
 static_out
-public
-data
-views

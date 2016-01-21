@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+  head
+    // script(src="data.js")
+    title Example Looping Data
+  body
+    h1= heading
+    p Choose an example
+    img(src="img/sleeping-baby-sloth.jpg")
+    for d in data
+        h4
+            a(href="/detail/#{d.id}")= d.title
