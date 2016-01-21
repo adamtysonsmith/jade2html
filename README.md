@@ -1,7 +1,8 @@
 # jade2html
 Compiles Jade templates into static HTML files.
 
-Recommended Workflow
+##Recommended Workflow
+
 1. Fork this repo
 2. Edit the .gitignore to remove views/ and /public
 3. Add your own views and public directories (These are the folders the script looks to compile assets and templates)
@@ -10,16 +11,21 @@ Recommended Workflow
 6. To test during development, simply `node app` or `npm run dev`
 7. To compile your final product run `npm run compile`
 
-Directions for Setting Up Your Compilation
+##Directions for Setting Up Your Compilation
+
 1. Go to app.js
 2. Look inside the if block on line 20
-2. Use the following functions to create directories, copy assets, compile parent pages, and the child pages that belong to each parent.
-`Compile.makeDir`
-`Compile.copyAssets`
-`Compile.writeParent`
-`Compile.writeChildren`
+3. Use the following functions to create directories, copy assets, compile parent pages, and the child pages that belong to each parent.
 
-Here is an example of using these in action:
+| Function                | Params        |
+| ----------------------- | :-------------------------------------:|
+| `Compile.makeDir`       | Name of directory to create            |
+| `Compile.copyAssets`    | Directory to copy assets to            |
+| `Compile.writeParent`   | Directory, template, name of html file |
+| `Compile.writeChildren` | Directory, template                    |
+
+
+##Here is an example of using these in action:
 
 ```
   Compile.makeDir('static_out')
