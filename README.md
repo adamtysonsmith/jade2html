@@ -18,14 +18,14 @@ Compiles Jade templates into static HTML files.
 3. Use the following functions to create directories, copy assets, compile parent pages, and the child pages that belong to each parent.
 
 | Function                | Params        |
-| ----------------------- | :-------------------------------------:|
-| `Compile.makeDir`       | Name of directory to create            |
-| `Compile.copyAssets`    | Directory to copy assets to            |
-| `Compile.writeParent`   | Directory, template, name of html file |
-| `Compile.writeChildren` | Directory, template                    |
+|----------------------- |:-------------------------------------:|
+|`Compile.makeDir`       |Name of directory to create            |
+|`Compile.copyAssets`    |Directory to copy assets to            |
+|`Compile.writeParent`   |Directory, template, name of html file |
+|`Compile.writeChildren` |Directory, template                    |
 
 
-##Here is an example of using these in action:
+###Here is an example of using these in action:
 
 ```
   Compile.makeDir('static_out')
