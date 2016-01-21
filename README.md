@@ -25,10 +25,15 @@ Compiles Jade templates into static HTML files.
 |`Compile.writeChildren` |Directory, template                    |
 
 
-###Here is an example of using these in action:
+###Here is an example of using the config.js in action:
 
 ```
-  Compile.makeDir('static_out')
+var Compile = require('./compile.js');
+
+module.exports = function() {
+  
+  // Write compile functions here
+    Compile.makeDir('static_out')
     .then(function(directory){
       Compile.writeParent(directory, 'views/index.jade', 'index.html');
       Compile.writeChildren(directory, 'views/detail.jade');
@@ -36,5 +41,7 @@ Compiles Jade templates into static HTML files.
     .catch(function(err){
       console.log("Error compiling templates!", err);
     });
+  
+};
 
 ```
