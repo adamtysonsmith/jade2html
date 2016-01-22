@@ -1,11 +1,11 @@
 doctype html
 html(lang='en')
   head
-    title Example Parent Page
+    title= data.title
   body
-    h1= heading
-    p This is a cute baby sloth
-    img(src="img/sleeping-baby-sloth.jpg")
-    for d in data
+    h1= data.heading
+    p= data.content
+    img(src="#{data.images[0]}")
+    for d in data.children
         h4
-            a(href="/detail/#{d.id}")= d.title
+            a(href="#{d.filename}")= d.title

@@ -1,5 +1,11 @@
-module.exports = [
-    {
+module.exports = {
+  title: 'jade2html Demo',
+  heading: 'Compile your Jade templates to Static HTML in a snap!',
+  content: 'It is so easy to compile your Jade templates, that even this cute baby sloth could do it.',
+  images: ['img/sleeping-baby-sloth.jpg'],
+  scripts: [],
+  filename: 'index.html',
+  children: [{
       title: "Hey World",
       author: {
         twitter: "@actionjackson",
@@ -21,5 +27,6 @@ module.exports = [
       heading: "Hello there.. again",
       filename: "child_2.html",
       id: 1
-    }
-]
+    }],
+                 
+}

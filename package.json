@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node app",
+    "start": "node app",
     "compile": "node app compile"
   },
   "author": "",
@@ -14,7 +14,6 @@
     "express": "^4.13.3",
     "fs-extra": "^0.26.4",
     "jade": "^1.11.0",
-    "mkdirp": "^0.5.1",
     "q": "^1.4.1"
   }
 }

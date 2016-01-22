@@ -1,8 +1,6 @@
 var Q    = require('q');
 var fs   = require('fs-extra'); 
 var jade = require('jade');
-var data = require('./data/data.js');
-//var mkdr = require('mkdirp');
 
 // Make directory, returns promise
 var makeDir = function(directory) {
@@ -20,14 +18,14 @@ var makeDir = function(directory) {
 }
 
 // Write HTML files for each jade template
-var writeParent = function(directory, filepath, filename) {
+var writeParent = function(directory, filepath, data) {
   fs.readFile(filepath, 'utf-8', function(error, source){
-    var html = jade.render(source, {data: data});
-    fs.writeFile(directory + '/' + filename, html, 'utf-8');
+    var html = jade.render(source, { data: data });
+    fs.writeFile(directory + '/' + data.filename, html, 'utf-8');
   });
 }
 
-var writeChildren = function(directory, filepath) {
+var writeChildren = function(directory, filepath, data) {
   fs.readFile(filepath, 'utf-8', function(error, source){
     data.forEach(function(d){
       var html = jade.render(source, d);
@@ -36,13 +34,14 @@ var writeChildren = function(directory, filepath) {
   });
 }
 
-var copyAssets = function(directory) {
-  
+var copyPublicAssets = function(directory) {
+  try { fs.copySync('./public', directory) }
+  catch (err) { console.log('Error! Could not copy public assets', err.message) }
 }
 
 module.exports = {
   makeDir: makeDir,
-  copyAssets: copyAssets,
+  copyPublicAssets: copyPublicAssets,
   writeParent: writeParent,
   writeChildren: writeChildren
 }
@@ -73,11 +72,14 @@ module.exports = {
 /*
 
     App Requirements
-    - Develop locally with dynamic templating by running $npm dev
-    - Compile the dynamic templates to HTML by running $npm compile
-    @todo - Write script to fix hrefs
-    @todo - What are the requirements for the data structure?
-    @todo - copy everything in public and paste in output main directory
+    - Develop locally with dynamic templating by running $npm run dev
+    - Compile the dynamic templates to HTML by running $npm run compile
+    
+    The current API
+    - Use Compile functions to build a compilation
+    - Use the RouteHelper function to pass data to children routes
+    - Use :filename param
+    - 
     
 */
 
