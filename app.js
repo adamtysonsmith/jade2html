@@ -15,13 +15,11 @@ app.use(bodyParser.json());
 // Routes
 Routes(app);
 
+// Compile or Run Local Dev Server
 if (process.argv[2] === 'compile') {
-  // Compile Jade Templates
   console.log('Compiling Jade templates to static HTML..');
   Config();
-  console.log('Done!');
 } else {
-  // Run Local Dev Server
   var port = process.env.PORT || 3000;
   var server = app.listen(port, function() {
       console.log('Express server listening on port:', port);

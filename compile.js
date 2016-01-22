@@ -10,7 +10,6 @@ var makeDir = function(directory) {
       console.log("Error making " + directory + " directory");
       deferred.reject(err);
     } else {
-      console.log("Directory created successfully:", directory);
       deferred.resolve(directory);
     }
   });
@@ -39,11 +38,21 @@ var copyPublicAssets = function(directory) {
   catch (err) { console.log('Error! Could not copy public assets', err.message) }
 }
 
+var compileError = function(err) {
+  console.log("Error compiling templates!", err);
+}
+
+var compileDone = function() {
+  console.log("Finished compiling templates!");
+}
+
 module.exports = {
   makeDir: makeDir,
   copyPublicAssets: copyPublicAssets,
   writeParent: writeParent,
-  writeChildren: writeChildren
+  writeChildren: writeChildren,
+  error: compileError,
+  done: compileDone
 }
 
 // Possible solutions to stuff
